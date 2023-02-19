@@ -15,7 +15,7 @@ pipeline {
 
     stage('Build Docker') {
       steps {
-        sh 'docker build -f curriculum-front/Dockerfile .'
+        sh 'docker build -f curriculum-front/Dockerfile . -t dimitar2204/curriculum-front:latest'
       }
     }
 
@@ -31,7 +31,7 @@ pipeline {
 
     stage('Push to Docker') {
       steps {
-        sh 'docker push dimitur2204/curriculum-front:latest'
+        sh 'docker push dimitar2204/curriculum-front:latest'
       }
     }
 
