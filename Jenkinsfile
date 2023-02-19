@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('List dirs') {
+    stage('Front End Unit Tests') {
       steps {
-        sh 'ls -la'
+        sh 'cd curriculum-front && npm install && npm run test:unit'
       }
     }
 
