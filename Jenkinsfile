@@ -29,5 +29,11 @@ pipeline {
       }
     }
 
+    stage('Push to Docker') {
+      steps {
+        sh 'docker push dimitur2204/curriculum-front:latest'
+      }
+    }
+
   }
 }
